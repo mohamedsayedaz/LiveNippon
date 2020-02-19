@@ -1,0 +1,316 @@
+body{
+	font-family: 'Changa', sans-serif;
+}
+.logo{
+	width:75% !important;
+}
+.mynav{
+	background-color: white !important;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.nav-bar-link{
+	font-family: 'Changa', sans-serif;
+    font-size: 25px;
+    color: #656565 !important;
+    margin: 10px;
+   /* border-left :5px solid black;*/
+   /* border-right:1px solid black; */
+    border-radius:40px;
+}
+.nav-bar-link:hover{
+	color: #ed1b24 !important;
+	font-weight: bold;
+	 border-right:5px solid #ed1b24;
+	border-top :2px solid #ed1b24;
+    border-bottom:2px solid #ed1b24;
+    border-radius:30px;
+}
+.nav-div{
+    margin-top: 42px;
+    margin-left: 72px;
+    padding: 5px;
+}
+.f-ban{
+    background-image: url(./img/b1.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+.t-ban{
+	background-image: url(./img/b4.jpg);
+    height: 250px;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	background-size: cover;
+}
+.f-b-t{
+	color:white;
+    font-weight: bold;
+}
+.s-b-t{
+	height: 100px;
+    width: 100%;
+	margin: 0 auto ;
+	color: white !important;
+    font-family: 'Changa', sans-serif;
+    font-size: 50px;
+    background-color: #464748bf;
+    border: 1px solid white;
+    border-radius: 40px;
+}
+.s-b-t{
+	color: #4c4a4b;
+    font-family: 'Changa', sans-serif;
+    font-size: 35px;
+    padding: 13px;
+}
+.jumbotron{
+	margin-bottom: 0px !important;
+}
+.mylead{
+	font-weight: bold;
+    font-size: 18px;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	font-family: 'Changa', sans-serif;
+}
+.btn-center{
+	margin:0 auto;
+}
+#ContactUs{
+	font-family:'Changa', sans-serif;
+	color:white;
+	font-weight: bold;
+	background-image: url(./img/b2.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.contact{
+	margin-top: 150px;
+	margin-left: 10px;
+}
+.contactp{
+    font-size: 19px;    
+}
+.contactT{
+    font-size: 42px;
+    color: #efececfc;
+}
+.con-text{
+	background-color: #27252573;
+    box-shadow: 5px 6px 15px 1px #211e1e;
+}
+.col-back{
+	background-color: #353434db;
+}
+.r-icon{
+	width: 50px;
+	height:50px;
+}
+.col{
+	margin-top:25px;
+}
+
+#citytooltip{
+    display: none;
+    border: 1px solid #ddd;
+    padding: 40px;
+    width: 90%;
+    height: 200px;
+    margin: 125px auto;
+    background-color: #ffffff;
+    border-radius: 18px;
+}
+#tooltiptitle{
+    font-family: 'Changa', sans-serif;
+    font-size: xx-large;
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    border-radius:20px;
+    font-weight: bold;
+}
+#tooltipp{
+	font-family: 'Changa', sans-serif;
+}
+path:hover{
+	fill : #ed1b24;
+}
+.img-season{
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    height: 200px;
+}
+.centered-title {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: fantasy;
+    font-size: 45px;
+    background-color: #000000a6;
+    width: 200px;
+    border-radius: 40px;
+}
+.centered-title:hover{
+	color: #ed1b24;	    
+	background-color: #000000eb;
+}
+.travel-season-title{
+	background-color: #ffffff99;
+    padding: 20px;
+    border-radius: 28px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    margin-bottom: 40px;
+    box-shadow: 2px 4px 8px 2px #00000085;
+    font-family: 'Changa', sans-serif;
+}
+svg{
+	width: 100%;
+}
+.cat{
+	margin-bottom: 1px;
+    border-top: 3px solid #d4d4d4;
+    border-bottom: 3px solid #d4d4d4;
+    margin-top: 12px;
+    padding-top: 10px;
+}
+.cat-link{
+	color: black;
+}
+.cat-link:hover{
+	color:#ed1b24;
+	text-decoration: none; 
+}
+.cat-icon{
+	width: 48px;
+    height: 48px;
+}
+.cat-caption{
+	color:black;
+}
+
+@media screen and (max-width: 1024px){
+	#citytooltip{
+		width:90%;
+	}
+} 		
+@media screen and (max-width: 425px){
+	#carouselExampleInterval{
+	width:100%;
+}
+	#tokyo{
+		margin-bottom:20px!important;
+	}
+}
+
+@media screen and (min-width: 320px){
+	.tooltipdiv{
+		height: 0px;
+	}
+	#citytooltip{
+		width: 100%;
+		margin:0px;
+        padding: 13px;
+	}	
+	.jp-map{
+		width:100%;
+		height:100%;	
+		margin:0px;
+		padding:0px;
+	}
+}
+#trip-cover{
+	background-image: url("./img/trip-cover.jpg");
+    height: 300px;
+    background-position: center;
+    background-size:cover;
+}
+.img-trip{
+	width: 600px !important;
+    height: 300px;
+}
+.carousel-trip{
+	margin:0px auto;
+}
+
+.trip-caption{
+	font-weight: bold;
+	font-size: larger;
+	margin-top:15px;
+	margin-bottom: 15px;
+}
+.btn-pdf{
+	margin:0px auto;
+}
+.center{
+    width: 220px;
+	margin:0px auto;
+}
+.footer {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #292929;
+    height: 60px;
+    font-size: larger;
+    padding: 10px;
+    margin: 0;
+}
+#htitle { 
+    font-size: 50px;
+    padding: 26px;
+    margin: 0 auto;
+    color: #ed1b24;
+    height: 50%;
+    margin-top: 30px;
+}
+#tokyo{
+	background-color: white;
+}
+#tokyo_cover{
+    margin: 0px auto;
+    background-image: url(./img/tokyo_cover.jpg);
+    background-position: center;
+    height: 100% !important;
+    background-size: cover;
+}
+.paragraph{
+	    font-size: 25px;
+}
+.about {
+    color: white;
+    background-color: #00000096;
+    border: 1px solid #272727;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 58px;
+}
+.form-control-plaintext{
+    background-color: #e9ecef !important;
+    border-radius: 20px !important;
+    padding: 8px !important;
+}
+.btn-center{
+        width: 20%;
+    margin-left: 80%;
+}
+.cover-trip{
+    background-image: url(./img/cover_trip.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width:100%;
+}
+.cov-title{
+    background-color: #00000094;
+    border-radius: 52px;
+    padding: 35px !important;
+}
