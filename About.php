@@ -1,6 +1,5 @@
 <?php 
-  include './header.php';
-  include './navbar.php';
+  include './init.php';
 ?>    
 <!-- First Banner -->
 <div class="row jumbotron" id="tokyo_cover" style="height: 560px;">

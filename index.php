@@ -1,6 +1,5 @@
 <?php
-include './header.php';
-include './navbar.php'; 
+include './init.php';
 ?>
 <!-- First Banner -->
 <div class="jumbotron f-ban row">
