@@ -8,9 +8,9 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav nav-div">
       <a class="nav-item nav-link nav-bar-link" href="dashboard.php">Home</a>
-      <a class="nav-item nav-link nav-bar-link" href="travel.php">Trips Booked</a>
-      <a class="nav-item nav-link nav-bar-link" href="trip.php">Reviews</a>
-      <a class="nav-item nav-link nav-bar-link" href="ContactUs.php">Profile</a>
+      <a class="nav-item nav-link nav-bar-link" href="trip_reservation.php">Trips Booked</a>
+      <a class="nav-item nav-link nav-bar-link" href="reviews.php">Reviews</a>
+      <a class="nav-item nav-link nav-bar-link" href="profile.php">Profile</a>
     </div>
   </div>
   </nav>
