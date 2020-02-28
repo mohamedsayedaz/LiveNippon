@@ -1,5 +1,11 @@
 <?php
 include './init.php';
+session_start();
+if (isset($_GET['log'])) {
+    if($_GET['log']==0){
+      $_SESSION['username'] ='';      
+    }
+}
 ?>
 <!-- First Banner -->
 <div class="jumbotron f-ban row">

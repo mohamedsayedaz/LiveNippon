@@ -11,6 +11,7 @@
       <a class="nav-item nav-link nav-bar-link" href="trip_reservation.php">Trips Booked</a>
       <a class="nav-item nav-link nav-bar-link" href="reviews.php">Reviews</a>
       <a class="nav-item nav-link nav-bar-link" href="profile.php">Profile</a>
+      <a class="nav-item nav-link nav-bar-link" href="index.php?log=0">Log Out</a>
     </div>
   </div>
   </nav>
