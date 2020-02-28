@@ -33,6 +33,7 @@ if (isset($_SESSION['username']))
   </div>
 	</div>
 </div>
+    <h2>test</h2>
 <?php
 }
 else
