@@ -22,7 +22,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
     <div class="card-body">
       <i class="fas fa-star" style="font-size: 160px;margin-bottom: -13px;padding:30px;"></i>
       <h2 class="text-center">Reviews</h2>
-      <a href="users.php" class="text-center" style="color:white;">Goto Reviews Pages</a>
+      <a href="reviews.php" class="text-center" style="color:white;">Goto Reviews Pages</a>
     </div>
   </div>
 	<div class="card text-white col-md-6 bg-danger mb-3 dash_card">
