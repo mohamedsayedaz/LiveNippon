@@ -5,7 +5,9 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 
 	$adminNavbar='';
 	include './init.php';
-	$sql = $db ->prepare("Select * From booking");
+	if(!isset($_GET['do']) || $_GET['do'] == 'manage')
+	{
+		$sql = $db ->prepare("Select * From booking");
 	$sql -> execute();
 	$data = $sql->fetchAll();
 ?>
@@ -44,7 +46,29 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 ?>	
    </tbody>
 </table>
+
+	
 <?php 
+}
+else if($_GET['do'] == delete)
+{
+	if(isset($_GET['id']))
+	{
+		$id = $_GET['id'];
+	}
+	else
+	{
+		header("Location:reviews.php");
+	}
+	$sql = $db ->prepare("Delete * From reviews where ID=?");
+	$sql->execute($id);
+	$row = $sql->fetch();
+	$count = $sql->rowCount();
+	if($count > 0)
+	{
+		echo   '<div class="alert alert-success text-center alert-margin">Deleted Successfully</div>';
+	} 
+}
 }
 else
 {
