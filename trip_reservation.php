@@ -12,7 +12,7 @@ $sql -> execute();
 $data = $sql->fetchAll();
 ?>
 
-<div class="container" style="margin-top:100px;margin-bottom:60px;">
+<div class="container" style="margin-top:100px;margin-bottom:60px;background-color: #ddd;">
 <div class="row">
 	<h2>Reservations</h2>
 </div>

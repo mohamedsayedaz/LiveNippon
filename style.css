@@ -350,3 +350,13 @@ svg{
 .password_group_control{
     margin-bottom: 15px;
 }
+.a_f{
+    margin-bottom: 20px!important;
+}
+#add_trip_container{
+    margin-top: 40px;
+    background-color: #ddd;
+    padding: 30px;
+    border: 1px solid #cccaca;
+    border-radius: 20px;
+}
