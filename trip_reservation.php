@@ -54,7 +54,7 @@ $data = $sql->fetchAll();
 	 		echo '<td>' . $value[4] . '</td>';
 	 		echo '<td>' . $value[5] . '</td>';
 	 		echo '<td>' . $value[6] . '</td>';
-	 		echo '<td>' . '<a class="btn btn-danger" href="trip_reservation.php?do=delete&&id=' . $value[0] . ' >Delete</a>' . '</td>';
+	 		echo '<td>' . '<a class="btn btn-danger" href="trip_reservation.php?do=delete&&id=' . $value[0] . '">Delete</a>' . '</td>';
 	 	echo '</tr>';
 	 }
 ?>	
@@ -73,9 +73,8 @@ else if ($_GET['do'] == 'delete')
 	{
 		header("Location:trip_reservation.php");
 	}
-	$sql = $db ->prepare("Delete * From booking where ID=?");
-	$sql->execute($id);
-	$row = $sql->fetch();
+	$sql = $db ->prepare("Delete From booking where ID=?");
+	$sql->execute(array($id));
 	$count = $sql->rowCount();
 	if($count > 0)
 	{
@@ -140,7 +139,7 @@ else if($_GET['do'] == 'search')
 	 		echo '<td>' . $value[4] . '</td>';
 	 		echo '<td>' . $value[5] . '</td>';
 	 		echo '<td>' . $value[6] . '</td>';
-	 		echo '<td>' . '<a href="trip_reservation.php?do=delete&&id=' . $value[0] . ' >Delete</a>' . '</td>';
+	 		echo '<td>' . '<a class="btn btn-danger" href="trip_reservation.php?do=delete&&id=' . $value[0] . '" >Delete</a>' . '</td>';
 	 	echo '</tr>';
 	 }
 ?>	

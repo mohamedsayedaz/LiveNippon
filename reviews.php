@@ -7,13 +7,13 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 	include './init.php';
 	if(!isset($_GET['do']) || $_GET['do'] == 'manage')
 	{
-		$sql = $db ->prepare("Select * From booking");
+		$sql = $db ->prepare("Select * From reviews");
 	$sql -> execute();
 	$data = $sql->fetchAll();
 ?>
 <div class="container" style="margin-top:100px;margin-bottom:60px;">
 <div class="row">
-	<h2>Reservations</h2>
+	<h2>Reviews</h2>
 </div>
 <div class="row">
 <div class="table-responsive"> 
@@ -40,7 +40,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 	 		echo '<td>' . $value[2] . '</td>';
 	 		echo '<td>' . $value[3] . '</td>';
 	 		echo '<td>' . $value[4] . '</td>';
-	 		echo '<td>' . '<a href="trip_reservation.php?do=delete&&id=' . $value[0] . ' >Delete</a>' . '</td>';
+	 		echo '<td>' . '<a class="btn btn-danger" href="reviews.php?do=delete&&id=' . $value[0] . '">Delete</a>' . '</td>';
 	 	echo '</tr>';
 	 }
 ?>	
@@ -50,7 +50,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 	
 <?php 
 }
-else if($_GET['do'] == delete)
+else if($_GET['do'] == 'delete')
 {
 	if(isset($_GET['id']))
 	{
@@ -60,9 +60,8 @@ else if($_GET['do'] == delete)
 	{
 		header("Location:reviews.php");
 	}
-	$sql = $db ->prepare("Delete * From reviews where ID=?");
-	$sql->execute($id);
-	$row = $sql->fetch();
+	$sql = $db ->prepare("Delete From reviews where ID=?");
+	$sql->execute(array($id));
 	$count = $sql->rowCount();
 	if($count > 0)
 	{

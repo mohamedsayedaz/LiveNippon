@@ -347,3 +347,6 @@ svg{
     width: 100px;
     height: 130px;
 }
+.password_group_control{
+    margin-bottom: 15px;
+}
