@@ -15,17 +15,18 @@
     $row = $sql->fetch();
     $trip_name = $row[0];
     $trip_cost = $row[1];
-
+    $d=strtotime("today");
+    ;
     //Send Mail To Client
-    $sql = $db->prepare("INSERT INTO `booking`(`Client_Name`, `Email`, `Mobile`, `trip_name`, `Total_Money`, `Trip_Date`) VALUES (?,?,?,?,?,?)");
-    $sql ->execute(array($name,$Email,$PhoneNumber,$trip_name,$trip_cost,$date));
+    $sql = $db->prepare("INSERT INTO `booking`(`Client_Name`, `Email`, `Mobile`, `trip_name`, `Total_Money`, `Trip_Date`,`date`) VALUES (?,?,?,?,?,?,?)");
+    $sql ->execute(array($name,$Email,$PhoneNumber,$trip_name,$trip_cost,$date,("Y-m-d", $d)));
 
 $message = "Dear LiveNippon , " . "Hi I'm " . $name . " And my PhoneNumber is " . $PhoneNumber . " and The People They Will Travel are " .  $Count . " Person(s) And The Expected Date Is " . $date . " and The Destination Is " . $Destination . "my Email is " . $Email; 
 //$message = "Test 4";
 // In case any of our lines are larger than 70 characters, we should use wordwrap()
 $message = wordwrap($message, 70, "\r\n");
 // Send
-mail('Travel@livenippon.com','LiveNippon', $message);
+mail('test@t.com','LiveNippon', $message);
 header('Location: index.php');
-//
+//Travel@livenippon.com
 ?>

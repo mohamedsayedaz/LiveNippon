@@ -56,7 +56,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 	{
 		#Add Form
 		?>
-		<div id="add_trip_container" class="container"s>
+		<div id="add_trip_container" class="container">
 			<div class="row">
 				<div class="col-md-6" style="margin:0 auto;">
 					<h2>Add New Trip</h2>
@@ -69,7 +69,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 				 <input type="text" name="t_name" class="form-control a_f" placeholder="Trip Name" />
 				 <textarea rows="8" class="form-control a_f" name="t_details" placeholder="Trip Details"></textarea>
   				<input type="text" class="form-control a_f" placeholder="Trip Cost" name="t_cost"/>
-  				 <input type="file" class="form-control a_f" name="img">
+  				 <input type="file" name="trip_image_file" class="a_f" id="trip_image"/>
   				<button type="submit" class="btn btn-primary a_f">Save</button>
 				</form>
 				</div>
@@ -107,7 +107,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 			$trip_name = $_POST['t_name'];
 			$trip_details = $_POST['t_details'];
 			$trip_cost = $_POST['t_cost'];
-			$trip_img = $_POST['img'];
+			$trip_img = $_POST['trip_image_file'];
 
 			#validate
 			$formsError = array();
@@ -133,16 +133,17 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
      		if(empty($formsError)){
 
 			$targetfolder = "up/" ;
-   				// Upload
+   			// Upload
+   			$name  = $_FILES['trip_image']['name'];
     		 //Insert Into The Database
             
-            $stmt = $db->prepare("INSERT INTO `trips`(`ID`, `trip_name`, `details`, `cost`, `date`, `trip_img`) VALUES (NULL, ?, ?,?,CURRENT_TIMESTAMP,?);");
-            $stmt->execute(array($trip_name,$trip_details,$trip_cost,$trip_img));
-            $count = $stmt->rowCount();
+           // $stmt = $db->prepare("INSERT INTO `trips`(`ID`, `trip_name`, `details`, `cost`, `date`, `trip_img`) VALUES (NULL, ?, ?,?,CURRENT_TIMESTAMP,?);");
+           // $stmt->execute(array($trip_name,$trip_details,$trip_cost,$trip_img));
+           // $count = $stmt->rowCount();
               //move_uploaded_file($_FILES['img']['tmp_name'],$targetfolder . $trip_imgf); 
     		 // Echo Success Message
             
-     		 echo   '<div class="alert alert-success text-center alert-margin">' . $count . ' Trip(s) Inserted </div>';
+     		// echo   '<div class="alert alert-success text-center alert-margin">' . $count . ' Trip(s) Inserted </div>';
      		}
 		}
 	}
@@ -175,7 +176,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 				 <input type="text" name="t_name" class="form-control a_f" placeholder="Trip Name" value="<?php echo $row[0]; ?>" />
 				 <textarea rows="8" class="form-control a_f" name="t_details" placeholder="Trip Details"><?php echo $row[1]; ?></textarea>
   				<input type="text" class="form-control a_f" value="<?php echo $row[2]; ?>" placeholder="Trip Cost" name="t_cost"/>
-  				 <input type="file" class="form-control a_f" value="<?php echo $row[3]; ?>" name="img">
+  				 <input type="file" class="form-control a_f" value="<?php echo $row[3]; ?>" name="file">
   				<button type="submit" class="btn btn-primary a_f">Save</button>
 				</form>
 				</div>

@@ -1,5 +1,5 @@
 body{
-	font-family: 'Changa', sans-serif;
+	font-family: 'Changa', sans-serif!important;
 }
 .logo{
 	width:75% !important;
@@ -351,7 +351,7 @@ svg{
     margin-bottom: 15px;
 }
 .a_f{
-    margin-bottom: 20px!important;
+    margin-bottom: 5px!important;
 }
 #add_trip_container{
     margin-top: 40px;
@@ -372,4 +372,31 @@ svg{
      width: 50px;
     height: 50px;
     margin-top: 5px;
+}
+#review_date{
+    font-size: 9px;
+}
+#review_comment{
+    font-size: 14px;
+}
+#reviews_panel{
+    background-color: #ddd;
+    padding: 30px;
+    box-shadow: inset -1px 8px 20px 2px #9a9a9a;
+}
+.single_review{
+    border-bottom: 5px solid #00000094;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 8px 11px 10px 1px #afafaf;
+    margin-left: 10px;
+    margin-top: 13px;
+    background-color: white;
+}
+.trip_img{
+    border: 1px solid #969494;
+    width: 400px;
+    height: 250px;
+    box-shadow: 4px 7px 10px 1px #636161;
+    margin-left: -10px;  
 }
