@@ -9,12 +9,18 @@ if (isset($_GET['log'])) {
 }
 ?>
 <!-- First Banner -->
-<div class="jumbotron f-ban row">
-  <h1 class="text-center f-b-t">Win A Cool Local Tour Of Shimokitazawa</h1>
+<div class="jumbotron f-ban row" style="margin:0 auto;">
+  <div class="col-md-8" style="margin:0 auto;margin-top:70px;">
+    <h1 class="text-center f-b-t">Win A Cool Local Tour Of Shimokitazawa</h1>
+  </div>
   </div>
 <!-- Second Banner -->  
 <div class="jumbotron s-ban">
-  <h1 class="text-center s-b-t">Our Best Sellers Packages</h1>
+  <div class="row">
+    <div class="col-md-6" style="margin:0 auto;"> 
+      <h1 class="text-center s-b-t">Our Best Sellers Packages</h1>
+    </div>
+  </div>
   <p class="text-center lead mylead">Our best sellers packages are Mt Fuji 1 day tour which include lake Kawaguchi, Oshino Hakkai, Niko 2 Days tour , Yuzawa sight seeing, Tokyo Skytree , Best local food Tour, Japanese traditional dress, sumo wrestling,</p>
   </div>
 <!-- Contact Us -->

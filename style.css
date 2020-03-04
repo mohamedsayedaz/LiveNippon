@@ -360,3 +360,16 @@ svg{
     border: 1px solid #cccaca;
     border-radius: 20px;
 }
+.social{
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+}
+.footer-social{
+    margin-right: 10px;
+}
+.social-footer{
+     width: 50px;
+    height: 50px;
+    margin-top: 5px;
+}

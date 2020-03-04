@@ -12,6 +12,8 @@
       <a class="nav-item nav-link nav-bar-link" href="trip.php">Trip</a>
       <a class="nav-item nav-link nav-bar-link" href="ContactUs.php">Contact Us</a>
       <a class="nav-item nav-link nav-bar-link" href="About.php">About</a>
+       <a class="nav-item nav-link" href="https://Www.facebook.com/livenippon"><img class="social" src="./img/face_icon.svg" alt="facebook" /></a>
+      <a class="nav-item nav-link" href="https://instagram.com/livenippon.official?utm_source=ig_profile_share&igshid=1r270baai410v"><img class="social" src="./img/insta_icon.svg" alt="instgram" /></a>
     </div>
   </div>
   </nav>
