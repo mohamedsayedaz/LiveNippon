@@ -12,13 +12,13 @@ $sql -> execute();
 $data = $sql->fetchAll();
 ?>
 
-<div class="container" style="margin-top:100px;margin-bottom:60px;background-color: #ddd;">
+<div class="container" style="margin-top:100px;margin-bottom:60px;">
 <div class="row">
 	<h2>Reservations</h2>
 </div>
 <div class="row">
 	<div class="col-md-12" style="margin-bottom: 10px !important;margin-top: 10px!important;">
-		<a class="btn btn-danger" href="trip_reservation.php?do=search&&date=<?php echo date("Y/m/d"); ?>">Today</a>
+		<a class="btn btn-danger" href="trip_reservation.php?do=search&&date=<?php echo date("Y-m-d"); ?>">Today</a>
 		<a class="btn btn-danger" href="trip_reservation.php?do=search&&date=<?php $d=strtotime("yesterday");echo date("Y-m-d", $d); ?>">Yesterday</a>
 		<form action="trip_reservation.php?do=search" style="display:inline;" method="post">
 			<input type="date" name="date_in"/>
@@ -103,8 +103,8 @@ else if($_GET['do'] == 'search')
 </div>
 <div class="row">
 	<div class="col-md-12" style="margin-bottom: 10px !important;margin-top: 10px!important;">
-		<a class="btn btn-danger" href="trip_reservation.php?do=search&&date=<?php echo date("Y/m/d"); ?>">Today</a>
-		<a class="btn btn-danger" href="trip_reservation.php?do=search&&date=<?php $d=strtotime("yesterday");echo date("Y/m/d", $d); ?>">Yesterday</a>
+		<a class="btn btn-danger" href="trip_reservation.php?do=search&&date=<?php echo date("Y-m-d"); ?>">Today</a>
+		<a class="btn btn-danger" href="trip_reservation.php?do=search&&date=<?php $d=strtotime("yesterday");echo date("Y-m-d", $d); ?>">Yesterday</a>
 		<form action="trip_reservation.php?do=search" style="display:inline;" method="post">
 			<input type="date" name="date_in"/>
 			<input type="submit" name="btn" value="Search"/>			
