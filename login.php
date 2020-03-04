@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ob_start();
 include './init.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){

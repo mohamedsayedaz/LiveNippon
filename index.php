@@ -1,6 +1,6 @@
 <?php
-include './init.php';
 session_start();
+include './init.php';
 if (isset($_GET['log'])) {
     if($_GET['log']==0)
     {

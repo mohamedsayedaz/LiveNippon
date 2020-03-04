@@ -48,7 +48,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
   		
     			<input type="password" name="new_password" class="form-control password_group_control" placeholder="New Password">
   			
-  			 <button type="submit" class="btn btn-primary mb-2 password_group_control">Confirm identity</button>
+  			 <button type="submit" class="btn btn-primary mb-2 password_group_control">Change</button>
 		</form>
 		</div>
 	</div>
