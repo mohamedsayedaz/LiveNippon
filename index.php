@@ -23,6 +23,16 @@ if (isset($_GET['log'])) {
   </div>
   <p class="text-center lead mylead">Our best sellers packages are Mt Fuji 1 day tour which include lake Kawaguchi, Oshino Hakkai, Niko 2 Days tour , Yuzawa sight seeing, Tokyo Skytree , Best local food Tour, Japanese traditional dress, sumo wrestling,</p>
   </div>
+  <div class="jumbotron s-ban">
+    <div class="row">
+      <div class="col-md-6" style="margin:0 auto;margin-bottom:50px;">
+        <h1 class="text-center s-b-t">Our Tripadvisor</h1>
+      </div>
+    </div>
+    <div class="row">
+    <iframe id="trip_advisor" src="https://www.tripadvisor.com/Attraction_Review-g1066457-d16847878-Reviews-Live_Nippon-Shinjuku_Tokyo_Tokyo_Prefecture_Kanto.html"></iframe>  
+    </div>
+  </div>
 <!-- Contact Us -->
 <div id="ContactUs" class="jumbotron">
   <div class="row">

@@ -23,7 +23,7 @@
     ?>
     <div class="row" >
         <div class="col-md-4" style="margin: 0 auto;">
-          <img class="trip_img" src="./img/trip.png" />
+          <img class="trip_img" src="./up/<?php echo $value[2]; ?>" />
         </div>
     </div>
     <p class="text-center trip-caption"><?php echo $value[1]; ?></p>

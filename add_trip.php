@@ -65,11 +65,11 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 			</div>
 			<div class="row">
 				<div class="col-md-6" style="margin:0 auto;">
-				<form method="post" action="?do=insert">
+				<form  action="?do=insert" method="POST">
 				 <input type="text" name="t_name" class="form-control a_f" placeholder="Trip Name" />
 				 <textarea rows="8" class="form-control a_f" name="t_details" placeholder="Trip Details"></textarea>
   				<input type="text" class="form-control a_f" placeholder="Trip Cost" name="t_cost"/>
-  				 <input type="file" name="file" class="a_f" >
+  				 
   				<button type="submit" class="btn btn-primary a_f">Save</button>
 				</form>
 				</div>
@@ -107,7 +107,7 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 			$trip_name = $_POST['t_name'];
 			$trip_details = $_POST['t_details'];
 			$trip_cost = $_POST['t_cost'];
-			$trip_img = $_POST['file'];
+			//$trip_img = $_POST['uploaded_file'];
 
 			#validate
 			$formsError = array();
@@ -121,25 +121,16 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 			if(strlen($trip_cost) == 0){
 				$formsError[] = 'Trip Cost Cannot Be <strong>Empty</strong>';
 			}
-			if(strlen($trip_img) == 0){
-				$formsError[] = 'Trip Image Cannot Be <strong>Empty</strong>';
-			}
-
 			#print errors messages
 			foreach ($formsError as $error)
     		{
          		echo '<div class="alert acess-denied alert-danger">' . $error . '</div>';
      		}
      		if(empty($formsError)){
-
-			
-    		 //Insert Into The Database
-            
-           // $stmt = $db->prepare("INSERT INTO `trips`(`ID`, `trip_name`, `details`, `cost`, `date`, `trip_img`) VALUES (NULL, ?, ?,?,CURRENT_TIMESTAMP,?);");
-           // $stmt->execute(array($trip_name,$trip_details,$trip_cost,$trip_img));
-           // $count = $stmt->rowCount();
-              //move_uploaded_file($_FILES['img']['tmp_name'],$targetfolder . $trip_imgf); 
-    		 // Echo Success Message
+           $stmt = $db->prepare("INSERT INTO `trips`(`ID`, `trip_name`, `details`, `cost`, `date`) VALUES (NULL, ?, ?,?,CURRENT_TIMESTAMP);");
+           $stmt->execute(array($trip_name,$trip_details,$trip_cost));
+           $count = $stmt->rowCount();
+             
             header('Location:upload.php');
      		// echo   '<div class="alert alert-success text-center alert-margin">' . $count . ' Trip(s) Inserted </div>';
      		
@@ -175,7 +166,6 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 				 <input type="text" name="t_name" class="form-control a_f" placeholder="Trip Name" value="<?php echo $row[0]; ?>" />
 				 <textarea rows="8" class="form-control a_f" name="t_details" placeholder="Trip Details"><?php echo $row[1]; ?></textarea>
   				<input type="text" class="form-control a_f" value="<?php echo $row[2]; ?>" placeholder="Trip Cost" name="t_cost"/>
-  				 <input type="file" class="form-control a_f" value="<?php echo $row[3]; ?>" name="file">
   				<button type="submit" class="btn btn-primary a_f">Save</button>
 				</form>
 				</div>
@@ -195,7 +185,6 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 			$trip_name = $_POST['t_name'];
 			$trip_details = $_POST['t_details'];
 			$trip_cost = $_POST['t_cost'];
-			$trip_img = $_POST['img'];
 			$id = $_POST['current_id'];
 			#validate
 			$formsError = array();
@@ -209,9 +198,6 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
 			if(strlen($trip_cost) == 0){
 				$formsError[] = 'Trip Cost Cannot Be <strong>Empty</strong>';
 			}
-			if(strlen($trip_img) == 0){
-				$formsError[] = 'Trip Image Cannot Be <strong>Empty</strong>';
-			}
 
 			#print errors messages
 			foreach ($formsError as $error)
@@ -221,8 +207,8 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '')
      		if(empty($formsError)){
 
             
-            $stmt = $db->prepare("Update `trips` set trip_name=? , details=? , cost = ? , trip_img=? where id=?");
-            $stmt->execute(array($trip_name,$trip_details,$trip_cost,$trip_img,$id));
+            $stmt = $db->prepare("Update `trips` set trip_name=? , details=? , cost = ? where id=?");
+            $stmt->execute(array($trip_name,$trip_details,$trip_cost,$id));
             $count = $stmt->rowCount();
               //move_uploaded_file($_FILES['img']['tmp_name'],$targetfolder . $trip_imgf); 
     		 // Echo Success Message
